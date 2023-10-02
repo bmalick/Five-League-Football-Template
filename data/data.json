@@ -1,0 +1,1757 @@
+{
+    "leagues": [
+        {
+            "class_kwargs": {
+                "name": "La Liga",
+                "url": "https://www.laliga.com/",
+                "logo_tag": "",
+                "link_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/LaLiga_EA_Sports_2023_Vertical_Logo.svg/langfr-1280px-LaLiga_EA_Sports_2023_Vertical_Logo.svg.png"
+            },
+            "crawler_data": {
+                "club_list_endpoint": "en-GB/laliga-easports/clubs",
+                "club_list_tag": "div.jQITpe a.link",
+                "club_name_tag": "p",
+                "logo_tag": [
+                    "link",
+                    "img"
+                ],
+                "website_tag": "table a"
+            }
+        },
+        {
+            "class_kwargs": {
+                "name": "Premier League",
+                "url": "https://www.premierleague.com/",
+                "logo_tag": "div.fixedContainer img",
+                "link_logo": ""
+            },
+            "crawler_data": {
+                "club_list_endpoint": "clubs",
+                "club_list_tag": "a.club-card",
+                "club_name_tag": "h2",
+                "logo_tag": [
+                    "link",
+                    "#mainContent > header > div.club-header__badge-container > img"
+                ],
+                "website_tag": "div.club-links__website a"
+            }
+        },
+        {
+            "class_kwargs": {
+                "name": "Bundesliga",
+                "url": "https://www.bundesliga.com",
+                "logo_tag": "",
+                "link_logo": "https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Bundesliga_logo_%282017%29.svg/1200px-Bundesliga_logo_%282017%29.svg.png"
+            },
+            "crawler_data": {
+                "club_list_endpoint": "/en/bundesliga/clubs",
+                "club_list_tag": "club-card a",
+                "club_name_tag": ".club",
+                "logo_tag": [
+                    "extend",
+                    "img.logo"
+                ],
+                "website_tag": "div.linkBar div:nth-child(2n) a"
+            }
+        },
+        {
+            "class_kwargs": {
+                "name": "Ligue 1",
+                "url": "https://www.ligue1.com/",
+                "logo_tag": "",
+                "link_logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/c/ca/Logo_Ligue_1_Uber_Eats_2020.svg/1200px-Logo_Ligue_1_Uber_Eats_2020.svg.png"
+            },
+            "crawler_data": {
+                "club_list_endpoint": "clubs/List",
+                "club_list_tag": "a.ClubListPage-link",
+                "club_name_tag": "h3",
+                "logo_tag": [
+                    "extend",
+                    "div.HeadBanner-details img"
+                ],
+                "website_tag": "li.HeadBanner-socialItem a"
+            }
+        },
+        {
+            "class_kwargs": {
+                "name": "Serie A",
+                "url": "https://www.legaseriea.it/en/",
+                "logo_tag": "",
+                "link_logo": "https://img.legaseriea.it/vimages/62cef685/SerieA_RGB.jpg?webp&q=70&size=-x0"
+            },
+            "crawler_data": {
+                "club_list_endpoint": "serie-a/squadre",
+                "club_list_tag": "div.hm-box-square",
+                "club_name_tag": "h2",
+                "logo_tag": "",
+                "website_tag": "div.link-esternal a"
+            }
+        }
+    ],
+    "calendar": [
+        {
+            "name": "La Liga",
+            "url": "https://www.laliga.com/",
+            "calendar_url": "https://www.laliga.com/en-FR/laliga-easports/results/2023-24/",
+            "tags": {}
+        },
+        {
+            "name": "Premier League",
+            "url": "https://www.premierleague.com/",
+            "calendar_url": "",
+            "tags": {}
+        },
+        {
+            "name": "Bundesliga",
+            "url": "https://www.bundesliga.com",
+            "calendar_url": "",
+            "tags": {}
+        },
+        {
+            "name": "Ligue 1",
+            "url": "https://www.ligue1.com/",
+            "calendar_url": "",
+            "tags": {}
+        },
+        {
+            "name": "Serie A",
+            "url": "https://www.legaseriea.it/en/",
+            "calendar_url": "",
+            "tags": {}
+        }
+    ],
+    "teams": [
+        {
+            "team_name": "Athletic Club",
+            "team_url": "https://www.athletic-club.eus",
+            "team_logo": "https://assets.laliga.com/assets/2019/06/07/xsmall/athletic.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Atlético de Madrid",
+            "team_url": "http://www.atleticodemadrid.com/",
+            "team_logo": "https://assets.laliga.com/assets/2019/06/07/xsmall/atletico.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "CA Osasuna",
+            "team_url": "http://www.osasuna.es/",
+            "team_logo": "https://assets.laliga.com/assets/2019/06/07/xsmall/osasuna.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Cádiz CF",
+            "team_url": "http://web.cadizcf.com",
+            "team_logo": "https://assets.laliga.com/assets/2019/06/07/xsmall/cadiz.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Deportivo Alavés",
+            "team_url": "http://www.deportivoalaves.com/",
+            "team_logo": "https://assets.laliga.com/assets/2020/09/01/xsmall/27002754a98bf535807fe49a24cc63ea.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "FC Barcelona",
+            "team_url": "http://www.fcbarcelona.es",
+            "team_logo": "https://assets.laliga.com/assets/2019/06/07/xsmall/barcelona.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Getafe CF",
+            "team_url": "http://www.getafecf.com/",
+            "team_logo": "https://assets.laliga.com/assets/2023/05/12/xsmall/dc59645c96bc2c9010341c16dd6d4bfa.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Girona FC",
+            "team_url": "http://www.gironafc.cat",
+            "team_logo": "https://assets.laliga.com/assets/2022/06/22/xsmall/8f43addbb29e4a72f5e90b6edfe4728f.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Granada CF",
+            "team_url": "http://www.granadacf.es",
+            "team_logo": "https://assets.laliga.com/assets/2023/01/17/xsmall/f5db12f3a29fdfd14a0d50337016dc95.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Rayo Vallecano",
+            "team_url": "http://www.rayovallecano.es",
+            "team_logo": "https://assets.laliga.com/assets/2023/04/27/xsmall/57d9950a8745ead226c04d37235c0786.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "RC Celta",
+            "team_url": "https://www.rccelta.es/index.php/es/",
+            "team_logo": "https://assets.laliga.com/assets/2019/06/07/xsmall/celta.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "RCD Mallorca",
+            "team_url": "http://www.rcdmallorca.es/",
+            "team_logo": "https://assets.laliga.com/assets/2023/03/22/xsmall/013ae97735bc8e519dcf30f6826168ca.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Real Betis",
+            "team_url": "http://www.realbetisbalompie.es/",
+            "team_logo": "https://assets.laliga.com/assets/2022/09/15/xsmall/e4a09419d3bd115b8f3dab73d480e146.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Real Madrid",
+            "team_url": "http://www.realmadrid.com",
+            "team_logo": "https://assets.laliga.com/assets/2019/06/07/xsmall/real-madrid.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Real Sociedad",
+            "team_url": "http://www.realsociedad.com",
+            "team_logo": "https://assets.laliga.com/assets/2019/06/07/xsmall/real-sociedad.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Sevilla FC",
+            "team_url": "http://www.sevillafc.es/",
+            "team_logo": "https://assets.laliga.com/assets/2019/06/07/xsmall/sevilla.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "UD Almería",
+            "team_url": "http://www.udalmeriasad.com/",
+            "team_logo": "https://assets.laliga.com/assets/2019/06/07/xsmall/almeria.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "UD Las Palmas",
+            "team_url": "http://www.udlaspalmas.es/",
+            "team_logo": "https://assets.laliga.com/assets/2019/06/07/xsmall/las-palmas.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Valencia CF",
+            "team_url": "http://www.valenciacf.com",
+            "team_logo": "https://assets.laliga.com/assets/2019/06/07/xsmall/valencia.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Villarreal CF",
+            "team_url": "http://www.villarrealcf.es/",
+            "team_logo": "https://assets.laliga.com/assets/2019/06/07/xsmall/villarreal.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Arsenal",
+            "team_url": "https://www.arsenal.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+            "team_logo": "https://resources.premierleague.com/premierleague/badges/rb/t3.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Aston Villa",
+            "team_url": "https://www.avfc.co.uk?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+            "team_logo": "https://resources.premierleague.com/premierleague/badges/rb/t7.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Bournemouth",
+            "team_url": "https://www.afcb.co.uk/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+            "team_logo": "https://resources.premierleague.com/premierleague/badges/rb/t91.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Brentford",
+            "team_url": "https://www.brentfordfc.com?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+            "team_logo": "https://resources.premierleague.com/premierleague/badges/rb/t94.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Brighton & Hove Albion",
+            "team_url": "https://www.brightonandhovealbion.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+            "team_logo": "https://resources.premierleague.com/premierleague/badges/rb/t36.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Burnley",
+            "team_url": "https://www.burnleyfootballclub.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+            "team_logo": "https://resources.premierleague.com/premierleague/badges/rb/t90.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Chelsea",
+            "team_url": "https://www.chelseafc.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+            "team_logo": "https://resources.premierleague.com/premierleague/badges/rb/t8.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Crystal Palace",
+            "team_url": "https://www.cpfc.co.uk/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+            "team_logo": "https://resources.premierleague.com/premierleague/badges/rb/t31.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Everton",
+            "team_url": "https://www.evertonfc.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+            "team_logo": "https://resources.premierleague.com/premierleague/badges/rb/t11.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Fulham",
+            "team_url": "https://www.fulhamfc.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+            "team_logo": "https://resources.premierleague.com/premierleague/badges/rb/t54.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Liverpool",
+            "team_url": "https://www.liverpoolfc.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+            "team_logo": "https://resources.premierleague.com/premierleague/badges/rb/t14.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Luton Town",
+            "team_url": "https://www.lutontown.co.uk/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+            "team_logo": "https://resources.premierleague.com/premierleague/badges/rb/t102.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Manchester City",
+            "team_url": "https://www.mancity.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+            "team_logo": "https://resources.premierleague.com/premierleague/badges/rb/t43.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Manchester United",
+            "team_url": "https://www.manutd.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+            "team_logo": "https://resources.premierleague.com/premierleague/badges/rb/t1.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Newcastle United",
+            "team_url": "https://www.nufc.co.uk/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+            "team_logo": "https://resources.premierleague.com/premierleague/badges/rb/t4.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Nottingham Forest",
+            "team_url": "https://www.nottinghamforest.co.uk/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+            "team_logo": "https://resources.premierleague.com/premierleague/badges/rb/t17.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Sheffield United",
+            "team_url": "https://www.sufc.co.uk/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+            "team_logo": "https://resources.premierleague.com/premierleague/badges/rb/t49.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Tottenham Hotspur",
+            "team_url": "https://www.tottenhamhotspur.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+            "team_logo": "https://resources.premierleague.com/premierleague/badges/rb/t6.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "West Ham United",
+            "team_url": "https://www.whufc.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+            "team_logo": "https://resources.premierleague.com/premierleague/badges/rb/t21.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Wolverhampton Wanderers",
+            "team_url": "https://www.wolves.co.uk/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+            "team_logo": "https://resources.premierleague.com/premierleague/badges/rb/t39.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "FC Augsburg",
+            "team_url": "https://www.fcaugsburg.de",
+            "team_logo": "https://www.bundesliga.com/assets/clublogo/DFL-CLU-000010.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "1. FC Union Berlin",
+            "team_url": "https://www.fc-union-berlin.de",
+            "team_logo": "https://www.bundesliga.com/assets/clublogo/DFL-CLU-00000V.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "VfL Bochum 1848",
+            "team_url": "https://www.vfl-bochum.de",
+            "team_logo": "https://www.bundesliga.com/assets/clublogo/DFL-CLU-00000S.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "SV Werder Bremen",
+            "team_url": "https://www.werder.de",
+            "team_logo": "https://www.bundesliga.com/assets/clublogo/DFL-CLU-00000E.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "SV Darmstadt 98",
+            "team_url": "https://www.sv98.de",
+            "team_logo": "https://www.bundesliga.com/assets/clublogo/DFL-CLU-000016.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Borussia Dortmund",
+            "team_url": "https://www.bvb.de",
+            "team_logo": "https://www.bundesliga.com/assets/clublogo/DFL-CLU-000007.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Eintracht Frankfurt",
+            "team_url": "https://www.eintracht.de",
+            "team_logo": "https://www.bundesliga.com/assets/clublogo/DFL-CLU-00000F.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Sport-Club Freiburg",
+            "team_url": "https://www.scfreiburg.com",
+            "team_logo": "https://www.bundesliga.com/assets/clublogo/DFL-CLU-00000A.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "1. FC Heidenheim 1846",
+            "team_url": "https://www.fc-heidenheim.de",
+            "team_logo": "https://www.bundesliga.com/assets/clublogo/DFL-CLU-000018.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "TSG Hoffenheim",
+            "team_url": "https://www.tsg-hoffenheim.de",
+            "team_logo": "https://www.bundesliga.com/assets/clublogo/DFL-CLU-000002.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "1. FC Köln",
+            "team_url": "https://www.fc.de",
+            "team_logo": "https://www.bundesliga.com/assets/clublogo/DFL-CLU-000008.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "RB Leipzig",
+            "team_url": "https://www.rbleipzig.com",
+            "team_logo": "https://www.bundesliga.com/assets/clublogo/DFL-CLU-000017.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Bayer 04 Leverkusen",
+            "team_url": "https://www.bayer04.de",
+            "team_logo": "https://www.bundesliga.com/assets/clublogo/DFL-CLU-00000B.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "1. FSV Mainz 05",
+            "team_url": "https://www.mainz05.de",
+            "team_logo": "https://www.bundesliga.com/assets/clublogo/DFL-CLU-000006.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "Borussia Mönchengladbach",
+            "team_url": "https://www.borussia.de",
+            "team_logo": "https://www.bundesliga.com/assets/clublogo/DFL-CLU-000004.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "FC Bayern München",
+            "team_url": "https://www.fcbayern.com",
+            "team_logo": "https://www.bundesliga.com/assets/clublogo/DFL-CLU-00000G.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "VfB Stuttgart",
+            "team_url": "https://www.vfb.de",
+            "team_logo": "https://www.bundesliga.com/assets/clublogo/DFL-CLU-00000D.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "VfL Wolfsburg",
+            "team_url": "https://www.vfl-wolfsburg.de",
+            "team_logo": "https://www.bundesliga.com/assets/clublogo/DFL-CLU-000003.svg",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "AS MONACO",
+            "team_url": "https://www.asmonaco.com/",
+            "team_logo": "https://www.ligue1.com//-/media/Project/LFP/shared/Images/Clubs/2023-2024/9.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "CLERMONT FOOT 63",
+            "team_url": "https://www.clermontfoot.com/",
+            "team_logo": "https://www.ligue1.com//-/media/Project/LFP/shared/Images/Clubs/2023-2024/40.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "FC LORIENT",
+            "team_url": "https://fclweb.fr/",
+            "team_logo": "https://www.ligue1.com//-/media/Project/LFP/shared/Images/Clubs/2023-2024/7.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "FC METZ",
+            "team_url": "https://www.fcmetz.com/",
+            "team_logo": "https://www.ligue1.com//-/media/Project/LFP/shared/Images/Clubs/2023-2024/8.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "FC NANTES",
+            "team_url": "https://www.fcnantes.com/",
+            "team_logo": "https://www.ligue1.com//-/media/Project/LFP/shared/Images/Clubs/2023-2024/12.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "HAVRE AC",
+            "team_url": "http://www.hac-foot.com/",
+            "team_logo": "https://www.ligue1.com//-/media/Project/LFP/shared/Images/Clubs/2023-2024/5.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "LOSC LILLE",
+            "team_url": "https://www.losc.fr/",
+            "team_logo": "https://www.ligue1.com//-/media/Project/LFP/shared/Images/Clubs/2023-2024/158.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "MONTPELLIER HÉRAULT SC",
+            "team_url": "https://www.mhscfoot.com/",
+            "team_logo": "https://www.ligue1.com//-/media/Project/LFP/shared/Images/Clubs/2023-2024/10.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "OGC NICE",
+            "team_url": "https://www.ogcnice.com/fr/",
+            "team_logo": "https://www.ligue1.com//-/media/Project/LFP/shared/Images/Clubs/2023-2024/30.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "OLYMPIQUE DE MARSEILLE",
+            "team_url": "https://www.om.net/",
+            "team_logo": "https://www.ligue1.com//-/media/Project/LFP/shared/Images/Clubs/2023-2024/1.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "OLYMPIQUE LYONNAIS",
+            "team_url": "https://www.ol.fr/",
+            "team_logo": "https://www.ligue1.com//-/media/Project/LFP/shared/Images/Clubs/2023-2024/159.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "PARIS SAINT-GERMAIN",
+            "team_url": "https://www.psg.fr/",
+            "team_logo": "https://www.ligue1.com//-/media/Project/LFP/shared/Images/Clubs/2023-2024/13.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "RC LENS",
+            "team_url": "https://www.rclens.fr/fr",
+            "team_logo": "https://www.ligue1.com//-/media/Project/LFP/shared/Images/Clubs/2023-2024/6.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "RC STRASBOURG ALSACE",
+            "team_url": "http://www.rcstrasbourgalsace.fr/",
+            "team_logo": "https://www.ligue1.com//-/media/Project/LFP/shared/Images/Clubs/2023-2024/15.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "STADE BRESTOIS 29",
+            "team_url": "https://www.sb29.bzh/",
+            "team_logo": "https://www.ligue1.com//-/media/Project/LFP/shared/Images/Clubs/2023-2024/44.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "STADE DE REIMS",
+            "team_url": "https://www.stade-de-reims.com/",
+            "team_logo": "https://www.ligue1.com//-/media/Project/LFP/shared/Images/Clubs/2023-2024/41.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "STADE RENNAIS FC",
+            "team_url": "https://www.staderennais.com/",
+            "team_logo": "https://www.ligue1.com//-/media/Project/LFP/shared/Images/Clubs/2023-2024/14.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "TOULOUSE FC",
+            "team_url": "https://www.toulousefc.com/fr",
+            "team_logo": "https://www.ligue1.com//-/media/Project/LFP/shared/Images/Clubs/2023-2024/16.png",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "ATALANTA",
+            "team_url": "https://www.atalanta.it/",
+            "team_logo": "https://img.legaseriea.it/vimages/62cfd69d/atalanta.png?webp&q=70&size=-x135",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "BOLOGNA",
+            "team_url": "https://www.bolognafc.it",
+            "team_logo": "https://img.legaseriea.it/vimages/62cef3f6/bologna.png?webp&q=70&size=-x135",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "CAGLIARI",
+            "team_url": "https://www.cagliaricalcio.com",
+            "team_logo": "https://img.legaseriea.it/vimages/62cfd202/cagliari.png?webp&q=70&size=-x135",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "EMPOLI",
+            "team_url": "https://empolifc.com/",
+            "team_logo": "https://img.legaseriea.it/vimages/62cef42e/empoli.png?webp&q=70&size=-x135",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "FIORENTINA",
+            "team_url": "https://www.acffiorentina.com/it",
+            "team_logo": "https://img.legaseriea.it/vimages/62cef452/fiorentina.png?webp&q=70&size=-x135",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "FROSINONE",
+            "team_url": "https://www.frosinonecalcio.com",
+            "team_logo": "https://img.legaseriea.it/vimages/62cfdfec/frosinone.png?webp&q=70&size=-x135",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "GENOA",
+            "team_url": "https://www.genoacfc.it",
+            "team_logo": "https://img.legaseriea.it/vimages/649e8a06/GENOA-1.png?webp&q=70&size=-135",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "HELLAS VERONA",
+            "team_url": "https://www.hellasverona.it/",
+            "team_logo": "https://img.legaseriea.it/vimages/62cfe8b8/colore=BLUE.png?webp&q=70&size=-135",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "INTER",
+            "team_url": "https://www.inter.it/it",
+            "team_logo": "https://img.legaseriea.it/vimages/62cef496/inter.png?webp&q=70&size=-x135",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "JUVENTUS",
+            "team_url": "https://www.juventus.com/it/",
+            "team_logo": "https://img.legaseriea.it/vimages/62cfda28/colore=BLACK.png?webp&q=70&size=-135",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "LAZIO",
+            "team_url": "https://www.sslazio.it",
+            "team_logo": "https://img.legaseriea.it/vimages/62cef4d5/lazio.png?webp&q=70&size=-x135",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "LECCE",
+            "team_url": "https://www.uslecce.it",
+            "team_logo": "https://img.legaseriea.it/vimages/62cef4f6/lecce.png?webp&q=70&size=-x135",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "MILAN",
+            "team_url": "https://www.acmilan.com",
+            "team_logo": "https://img.legaseriea.it/vimages/62cef513/milan.png?webp&q=70&size=-x135",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "MONZA",
+            "team_url": "https://www.acmonza.com/",
+            "team_logo": "https://img.legaseriea.it/vimages/62c6acbd/monza.png?webp&q=70&size=-x135",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "NAPOLI",
+            "team_url": "https://sscnapoli.it/",
+            "team_logo": "https://img.legaseriea.it/vimages/62cef532/napoli.png?webp&q=70&size=-x135",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "ROMA",
+            "team_url": "https://www.asroma.com/",
+            "team_logo": "https://img.legaseriea.it/vimages/62cfd5ce/roma.png?webp&q=70&size=-x135",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "SALERNITANA",
+            "team_url": "https://www.ussalernitana1919.it",
+            "team_logo": "https://img.legaseriea.it/vimages/62cef553/salernitana.png?webp&q=70&size=-x135",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "SASSUOLO",
+            "team_url": "https://www.sassuolocalcio.it/",
+            "team_logo": "https://img.legaseriea.it/vimages/62cef590/sassuolo.png?webp&q=70&size=-x135",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "TORINO",
+            "team_url": "https://www.torinofc.it/",
+            "team_logo": "https://img.legaseriea.it/vimages/62cef5cb/torino.png?webp&q=70&size=-x135",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        },
+        {
+            "team_name": "UDINESE",
+            "team_url": "https://www.udinese.it/",
+            "team_logo": "https://img.legaseriea.it/vimages/62cef5e9/udinese.png?webp&q=70&size=-x135",
+            "squad_url": "",
+            "tags": {
+                "player_url_tag": "",
+                "player_name": "",
+                "player_national_team": "",
+                "player_age": "",
+                "player_pos": "",
+                "player_weight": "",
+                "player_height": "",
+                "player_num": "",
+                "player_img": ""
+            }
+        }
+    ]
+}
