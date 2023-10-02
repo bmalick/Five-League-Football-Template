@@ -1,3 +1,4 @@
 .env
+*.env
 IDs.yaml
 *.yaml
