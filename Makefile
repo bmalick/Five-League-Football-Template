@@ -1,6 +1,3 @@
-GREEN := 32
-RED := 31
-RESET := 
 
 all:
 	@echo
@@ -16,32 +13,44 @@ install:
 	@pip install -r requirements.txt
 
 test-player:
-	@python3 ./test/test_player.py
+	@python ./test/test_player.py
 
 test-team:
-	@python3 ./test/test_team.py
+	@python ./test/test_team.py
 
 test-match:
-	@python3 ./test/test_match.py
+	@python ./test/test_match.py
+
+test-league:
+	@python ./test/test_league.py 
 
 laliga-teams:
-	@python3 ./src/laliga_teams.py
+	@python ./src/laliga_teams.py
 
-laliga-calendar:
-	@python3 ./src/laliga_calendar.py
+
+calendar:
+	@python ./scripts/create_calendar.py \
+	--league $(league)
+
+# laliga-calendar:
+# 	@python ./src/laliga_calendar.py
 
 fetch-barca-squad:
-	@python3 ./src/barca_squad.py
+	@python ./src/barca_squad.py
 
 bundesliga-calendar:
-	@python3 ./scripts/bundesliga_calendar.py
+	@python ./scripts/bundesliga_calendar.py
 
 premier-league-calendar:
-	@python3 ./scripts/premier_league_calendar.py
+	@python ./scripts/premier_league_calendar.py
 
 laliga-calendar:
-	@python3 ./scripts/laliga_calendar.py
+	@python ./scripts/laliga_calendar.py
 
+update-score:
+	@python ./scripts/update_scores.py \
+	--league $(league) \
+	--week $(week)
 
 
 # instructions:

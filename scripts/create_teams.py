@@ -1,7 +1,7 @@
 import sys, json, os
 sys.path.append("./src")
 
-from crawlers import LeagueCrawler
+from calendars.crawlers import LeagueCrawler
 
 def main() -> None:
     with open("./data/data.json") as file:

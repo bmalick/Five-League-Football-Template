@@ -1,4 +1,4 @@
-from crawlers import TeamCrawler
+from calendars.crawlers import TeamCrawler
 import re, time
 
 class FCBarcelona(TeamCrawler):

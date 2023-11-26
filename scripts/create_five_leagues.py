@@ -1,7 +1,7 @@
 import sys, json
 sys.path.append("./src")
 
-from league import League
+from create.league import League
 
 def main() -> None:
 
