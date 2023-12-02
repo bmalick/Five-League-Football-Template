@@ -9,6 +9,12 @@ class UpdateScore:
     def match_exists(cls, date: str, home_team: str, away_team: str):
         matches = UpdateScore.find_fixtures(date, home_team, away_team, limit=1)
         return len(matches) == 1
+    
+    @classmethod
+    def get_league_gameweek(cls, league_name: str):
+        database_id = Utils.get_id("matches_db")
+        url = "%s/%s/query" % (cls.database_endpoint, database_id)
+
 
     @classmethod
     def find_fixtures(cls, date: str, home_team: str, away_team: str, limit=100) -> list[dict]:
