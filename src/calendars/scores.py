@@ -15,6 +15,31 @@ class UpdateScore:
         database_id = Utils.get_id("matches_db")
         url = "%s/%s/query" % (cls.database_endpoint, database_id)
 
+        payload = {
+            "page_size": 1,
+            "filter":{
+                "and": [
+                    {
+                        "property": "Date",
+                        "date": {"this_week": {}}
+                    },
+                    {
+                        "property": "League",
+                        "relation": {"contains": Utils.get_id(league_name)}
+                    }
+                    
+                ]
+            }
+        }
+
+        response = Utils.post(endpoint=url,payload=payload)
+        gameweek = response.json()["results"][0]
+        gameweek = gameweek["properties"]["Name"]["title"][0]["text"]["content"]
+        gameweek = gameweek.split(':')[0].split("GW")[-1].strip()
+        
+        return int(gameweek)
+    
+
 
     @classmethod
     def find_fixtures(cls, date: str, home_team: str, away_team: str, limit=100) -> list[dict]:
@@ -86,4 +111,3 @@ class UpdateScore:
                 payload["properties"]["Draw A"] = {"relation": [{"id": away_team_id}]}
             
             Utils.update(url, payload)
-
