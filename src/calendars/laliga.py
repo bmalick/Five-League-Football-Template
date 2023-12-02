@@ -1,10 +1,12 @@
 import sys; sys.path.append("./src")
 
-from utils import Utils
 import datetime
+from tqdm import tqdm
+
 from create.match import Match
 from calendars.crawlers import Crawler
 from calendars.scores import UpdateScore
+from utils import Utils
 
 
 class LaLigaCalendar(Crawler):
@@ -36,10 +38,10 @@ class LaLigaCalendar(Crawler):
         url = cls.calendar_url+str(gameweek)
         soup = Utils.get_soup(url)
         for row in cls.get_elements(soup, cls.tags["match_tag"]):
-            match_date  = cls.get_element(row, cls.tags["date_tag"])
-            match_hour  = cls.get_element(row, cls.tags["hour_tag"])
-            home_team = cls.get_elements(row, cls.tags["teams_tag"])[0].text.strip()
-            away_team = cls.get_elements(row, cls.tags["teams_tag"])[1].text.strip()
+            match_date = cls.get_element(row, cls.tags["date_tag"])
+            match_hour = cls.get_element(row, cls.tags["hour_tag"])
+            home_team  = cls.get_elements(row, cls.tags["teams_tag"])[0].text.strip()
+            away_team  = cls.get_elements(row, cls.tags["teams_tag"])[1].text.strip()
             
             
             # Process
@@ -63,12 +65,14 @@ class LaLigaCalendar(Crawler):
                         away_team  = away_team,
                         post       = False
                     )
-                else: print("%s vs %s fixture is already planned on %s" % (home_team, away_team, match_date))
+                else:
+                    continue
+                    # print("%s vs %s fixture is already planned on %s" % (home_team, away_team, match_date))
                 
             else: match_date = match_date.strftime("%Y-%m-%d %H:%M"); print("Programme is not ready"); continue
     
     def get_season_fixtures(self) -> None:
-        for gameweek in range(1,39):
+        for gameweek in tqdm(range(1,39)):
             self.get_fixtures(gameweek=gameweek)
     
     @classmethod
@@ -78,7 +82,7 @@ class LaLigaCalendar(Crawler):
 
         resume = cls.sep
 
-        for row in cls.get_elements(soup=soup, selector=cls.tags["match_tag"]):
+        for row in tqdm(cls.get_elements(soup=soup, selector=cls.tags["match_tag"])):
             home_team = cls.get_elements(row, cls.tags["teams_tag"])[0].text.strip()
             away_team = cls.get_elements(row, cls.tags["teams_tag"])[1].text.strip()
 

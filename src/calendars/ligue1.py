@@ -1,9 +1,11 @@
 import sys; sys.path.append("./src")
 import datetime
+from tqdm import tqdm
+
 from create.match import Match
 from calendars.crawlers import Crawler
-from utils import Utils
 from calendars.scores import UpdateScore
+from utils import Utils
     
 
 class Ligue1Calendar(Crawler):
@@ -89,7 +91,7 @@ class Ligue1Calendar(Crawler):
                 
     
     def get_season_fixtures(self) -> None:
-        for gameweek in range(1, 35):
+        for gameweek in tqdm(range(1, 35)):
             self.get_fixtures(gameweek=gameweek)
 
     @classmethod
@@ -99,7 +101,7 @@ class Ligue1Calendar(Crawler):
 
         resume = cls.sep
 
-        for row in cls.get_elements(soup, cls.tags["match_tag"]):
+        for row in tqdm(cls.get_elements(soup, cls.tags["match_tag"])):
             match_soup = Utils.get_soup(cls.base_url+row.attrs["href"])
             match_date, match_hour = cls.get_element(match_soup, cls.tags["match_date_tag"]).text.strip().split('-')
             match_date = list(map(lambda x:x.strip(), (match_date,match_hour)))

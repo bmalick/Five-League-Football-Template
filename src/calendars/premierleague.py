@@ -1,5 +1,7 @@
 
 import datetime
+from tqdm import tqdm
+
 from create.match import Match
 from calendars.crawlers import Crawler
 from calendars.scores import UpdateScore
@@ -88,12 +90,14 @@ class PremierLeagueCalendar(Crawler):
                         away_team  = away_team,
                         post       = True
                     )
-                else: print("%s vs %s fixture is already planned on %s" % (home_team, away_team, match_date))
+                else:
+                    continue
+                    # print("%s vs %s fixture is already planned on %s" % (home_team, away_team, match_date))
             except: pass
                 
                 
     def get_season_fixtures(self) -> None:
-        for gameweek in range(1,39):
+        for gameweek in tqdm(range(1,39)):
             self.get_fixtures(gameweek=gameweek)
     
     @classmethod
@@ -103,7 +107,7 @@ class PremierLeagueCalendar(Crawler):
 
         resume = cls.sep
         
-        for row in cls.get_elements(soup, cls.tags["match_tag"]):
+        for row in tqdm(cls.get_elements(soup, cls.tags["match_tag"])):
             
             home_team  = cls.get_element(row, cls.tags["home_team_tag"]).text
             away_team  = cls.get_element(row, cls.tags["away_team_tag"]).text

@@ -1,5 +1,7 @@
 import sys; sys.path.append("./src")
 import datetime
+from tqdm import tqdm
+
 from create.match import Match
 from calendars.crawlers import Crawler
 from utils import Utils
@@ -72,5 +74,5 @@ class BundesligaCalendar(Crawler):
             
     
     def get_season_fixtures(self) -> None:
-        for gameweek in range(1,35):
+        for gameweek in tqdm(range(1,35)):
             self.get_fixtures(gameweek=gameweek)
