@@ -100,7 +100,9 @@ class Ligue1Calendar(Crawler):
         soup = Utils.get_soup(url)
 
         resume = cls.sep
-
+        resume += ("| %s - Gameweek %d" % (cls.league_name, gameweek)).ljust(59) + "|\n"
+        resume += cls.sep
+        
         for row in tqdm(cls.get_elements(soup, cls.tags["match_tag"])):
             match_soup = Utils.get_soup(cls.base_url+row.attrs["href"])
             match_date, match_hour = cls.get_element(match_soup, cls.tags["match_date_tag"]).text.strip().split('-')

@@ -81,6 +81,8 @@ class LaLigaCalendar(Crawler):
         soup = Utils.get_soup(url)
 
         resume = cls.sep
+        resume += ("| %s - Gameweek %d" % (cls.league_name, gameweek)).ljust(59) + "|\n"
+        resume += cls.sep
 
         for row in tqdm(cls.get_elements(soup=soup, selector=cls.tags["match_tag"])):
             home_team = cls.get_elements(row, cls.tags["teams_tag"])[0].text.strip()
