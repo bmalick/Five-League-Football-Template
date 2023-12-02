@@ -114,8 +114,8 @@ class Ligue1Calendar(Crawler):
             away_team = cls.get_element(match_soup, cls.tags["away_team_tag"]).text.strip()
             home_team, away_team = list(map(lambda x:cls.short_names[x], (home_team, away_team)))
 
-            score = cls.get_element(match_soup, cls.tags["score_tag"]).text.split('-')
             try:
+                score = cls.get_element(match_soup, cls.tags["score_tag"]).text.split('-')
                 home_score, away_score = list(map(int, score))
 
                 UpdateScore.update(
