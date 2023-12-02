@@ -1,10 +1,10 @@
 import sys; sys.path.append("./src")
 from argparse import ArgumentParser
 
-from calendars.laliga import LaLigaCalendar
-from calendars.bundesliga import BundesligaCalendar
-from calendars.ligue1 import Ligue1Calendar
-from calendars.premierleague import PremierLeagueCalendar
+from src.calendars.laliga import LaLigaCalendar
+from src.calendars.bundesliga import BundesligaCalendar
+from src.calendars.ligue1 import Ligue1Calendar
+from src.calendars.premierleague import PremierLeagueCalendar
 
 CALENDARS = {
     "laliga": LaLigaCalendar,
