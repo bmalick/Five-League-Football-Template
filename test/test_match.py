@@ -1,15 +1,14 @@
-import sys
-sys.path.append(".")
-sys.path.append("src")
+import sys; sys.path.append("./")
 
-from src.match import Match
+from datetime import datetime
+from src.create.match import Match
 
 if __name__ == "__main__":
     Match(
-       league        = "premierleague",
-       matchday      = "Test Match",
-       match_date    = "2024-11-20 20:00",
-       home_team     = "Manchester City",
-       away_team     = "Arsenal",
-       post          = True
+       league     = "fcbarcelona",
+       matchday   = "Test Match",
+       match_date = datetime.today().strftime("%Y-%m-%d %H:%M"),
+       home_team  = "FC Barcelona",
+       away_team  = "Real Madrid",
+       post       = True
    )

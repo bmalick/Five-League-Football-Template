@@ -12,11 +12,6 @@ class Payload:
                 "database_id": database_id
             },
             
-            "icon": {
-                "type": "external",
-                "external": {"url": ""}
-            },
-            
             "properties": {
                 "Name": {
                     "title": [{
@@ -27,15 +22,28 @@ class Payload:
             }
         }
     
+    @staticmethod
+    def add_image(payload):
+        return {
+            **payload,
+            "icon": {
+                "type": "external",
+                "external": {"url": ""}
+            }
+            }
+    
 
 # League
 class LeaguePayload(Payload):
     def __new__(self, params) -> dict:
         payload = super().__new__(self, database_id=Utils.get_id("leagues_db"))
-
+        
+        if params.get("logo_url") is not None:
+            payload = self.add_image(payload)
+            payload["icon"]["external"]["url"]  = params.get("logo_url")
+            payload["cover"] = payload["icon"]
+        
         payload["properties"]["Name"]["title"][0]["text"]["content"] = params.get("name")
-        payload["icon"]["external"]["url"]  = params.get("logo_url")
-        payload["cover"] = payload["icon"]
         payload["properties"] = {
             **payload["properties"],
             "URL" : {"url": params.get("url")}
@@ -49,9 +57,11 @@ class TeamPayload(Payload):
     def __new__(self, params) -> dict:
         payload = super().__new__(self, database_id=Utils.get_id("teams_db"))
 
+        if params.get("team_logo") is None:
+            payload = self.add_image(payload)
+            payload["icon"]["external"]["url"] = params.get("team_logo")
+            payload["cover"]                   = payload["icon"]
         payload["properties"]["Name"]["title"][0]["text"]["content"] = params.get("team_name")
-        payload["icon"]["external"]["url"]                           = params.get("team_logo")
-        payload["cover"]                                             = payload["icon"]
 
         payload["properties"] = {
             **payload["properties"],
@@ -68,8 +78,10 @@ class PlayerPayload(Payload):
     def __new__(self, params) -> dict:
         payload = super().__new__(self, database_id=Utils.get_id("players_db"))
 
-        payload["icon"]["external"]["url"]                           = params.get("player_img")
-        payload["cover"]                                             = payload["icon"]
+        if params.get("player_img") is not None:
+            payload = self.add_image(payload)
+            payload["icon"]["external"]["url"] = params.get("player_img")
+            payload["cover"]                   = payload["icon"]
         payload["properties"]["Name"]["title"][0]["text"]["content"] = params.get("player_name")
 
         payload["properties"] = {
@@ -99,10 +111,9 @@ class MatchPayload(Payload):
     
     def __new__(self, params) -> dict:
         payload = super().__new__(self, database_id=Utils.get_id("matches_db"))
+        payload = self.add_image(payload)
 
-        # payload =  super().__call__()
         payload["icon"]["external"]["url"] = "https://www.notion.so/icons/playback-play_gray.svg"
-    
         payload["properties"]["Name"]["title"][0]["text"]["content"] = "%s : %s vs %s" % (
             params.get("matchday"), params.get("home_team").upper(), params.get("away_team").upper()
         )

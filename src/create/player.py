@@ -7,28 +7,31 @@ class Player:
     NOTION_ENDPOINT = "https://api.notion.com/v1/pages"
 
     def __init__(
-        self, team: str,
-        player_name: str, player_national_team: str,
-        player_age: int, player_pos: str, player_weight: int, player_height: int,
-        player_num: int, player_img: str,
-        post: bool = True
+        self, 
+        # team: str,
+        # player_name: str, player_national_team: str,
+        # player_age: int, player_pos: str, player_weight: int, player_height: int,
+        # player_num: int, player_img: str,
+        post: bool = True, **kwargs
         ) -> None:
 
-        self.player_name = player_name
-        self.player_pos  = player_pos.upper()
+        self.player_name = kwargs.get("player_name")
+        self.player_pos  = kwargs.get("player_pos").upper()
         self.post        = post
         
-        self.params = {
-            "team"                 : team,
-            "player_name"          : player_name,
-            "player_national_team" : player_national_team,
-            "player_age"           : player_age,
-            "player_pos"           : self.player_pos,
-            "player_weight"        : player_weight,
-            "player_height"        : player_height,
-            "player_num"           : player_num,
-            "player_img"           : player_img,
-        }
+        self.params = kwargs
+        print(kwargs)
+        # self.params = {
+        #     "team"                 : team,
+        #     "player_name"          : player_name,
+        #     "player_national_team" : player_national_team,
+        #     "player_age"           : player_age,
+        #     "player_pos"           : self.player_pos,
+        #     "player_weight"        : player_weight,
+        #     "player_height"        : player_height,
+        #     "player_num"           : player_num,
+        #     "player_img"           : player_img,
+        # }
 
         self.__call__()
         print(self)

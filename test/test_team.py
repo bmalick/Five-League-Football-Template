@@ -1,14 +1,13 @@
-import sys
-sys.path.append("./src")
+import sys; sys.path.append("./")
 
-from team import Team
+from src.create.team import Team
 
 if __name__ == "__main__":
 
     Team(
-        league         = "laliga",
-        team_name = "Supas Strikas",
-        team_url       = "https://www.mancity.com/",
-        team_logo      = "https://www.mancity.com/dist/images/logos/crest.svg",
-        post           = True
+        league    = "laliga",
+        team_name = "Supa Strikas",
+        team_url  = "supastrikas.com",
+        team_logo = "https://pbs.twimg.com/profile_images/640891952834215936/FwueNEWL_400x400.png",
+        post      = True
     )

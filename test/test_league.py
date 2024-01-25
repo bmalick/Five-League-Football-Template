@@ -1,6 +1,6 @@
-import sys
-sys.path.append("./src")
-from league import League
+import sys; sys.path.append("./")
+
+from src.create.league import League
 
 if __name__ == "__main__":
     League(
