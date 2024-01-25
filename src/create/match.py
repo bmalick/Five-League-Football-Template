@@ -1,8 +1,9 @@
-import sys; sys.path.append("./src")
+import sys; sys.path.append("./")
 
 import unidecode
-from create.payloads import MatchPayload
-from utils import Utils
+
+from src.create.payloads import MatchPayload
+from src.utils import Utils
 
 class Match:
     def __init__(

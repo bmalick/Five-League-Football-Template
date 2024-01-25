@@ -1,11 +1,12 @@
-import sys; sys.path.append("./src")
+import sys; sys.path.append("./")
+
 import datetime
 from tqdm import tqdm
 
-from create.match import Match
-from calendars.crawlers import Crawler
-from calendars.scores import UpdateScore
-from utils import Utils
+from src.create.match import Match
+from src.calendars.crawlers import Crawler
+from src.calendars.scores import UpdateScore
+from src.utils import Utils
     
 
 class Ligue1Calendar(Crawler):

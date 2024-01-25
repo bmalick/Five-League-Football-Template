@@ -1,12 +1,12 @@
-import sys; sys.path.append("./src")
+import sys; sys.path.append("./")
 
 import datetime
 from tqdm import tqdm
 
-from create.match import Match
-from calendars.crawlers import Crawler
-from calendars.scores import UpdateScore
-from utils import Utils
+from src.create.match import Match
+from src.calendars.crawlers import Crawler
+from src.calendars.scores import UpdateScore
+from src.utils import Utils
 
 
 class LaLigaCalendar(Crawler):
@@ -63,7 +63,7 @@ class LaLigaCalendar(Crawler):
                         match_date = match_date,
                         home_team  = home_team,
                         away_team  = away_team,
-                        post       = False
+                        post       = True
                     )
                 else:
                     continue

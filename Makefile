@@ -24,28 +24,31 @@ test-match:
 test-league:
 	@python ./test/test_league.py 
 
-laliga-teams:
-	@python ./src/laliga_teams.py
 
+# Fixtures
 
 calendar:
 	@python ./scripts/create_calendar.py \
 	--league $(league)
 
+today:
+	@python ./scripts/today_fixtures.py 
+
+
 # laliga-calendar:
 # 	@python ./src/laliga_calendar.py
 
-fetch-barca-squad:
-	@python ./src/barca_squad.py
+# fetch-barca-squad:
+# 	@python ./src/barca_squad.py
 
-bundesliga-calendar:
-	@python ./scripts/bundesliga_calendar.py
+# bundesliga-calendar:
+# 	@python ./scripts/bundesliga_calendar.py
 
-premier-league-calendar:
-	@python ./scripts/premier_league_calendar.py
+# premier-league-calendar:
+# 	@python ./scripts/premier_league_calendar.py
 
-laliga-calendar:
-	@python ./scripts/laliga_calendar.py
+# laliga-calendar:
+# 	@python ./scripts/laliga_calendar.py
 
 update-score:
 	@python ./scripts/update_scores.py \

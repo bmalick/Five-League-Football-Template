@@ -1,5 +1,6 @@
-import sys; sys.path.append("./src")
-from utils import Utils
+import sys; sys.path.append("./")
+
+from src.utils import Utils
 
 class UpdateScore:
     database_endpoint = "https://api.notion.com/v1/databases"

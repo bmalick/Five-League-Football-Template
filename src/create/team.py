@@ -1,6 +1,7 @@
-import sys; sys.path.append("./src")
-from create.payloads import TeamPayload
-from utils import Utils
+import sys; sys.path.append("./")
+
+from src.create.payloads import TeamPayload
+from src.utils import Utils
 
 
 class Team:

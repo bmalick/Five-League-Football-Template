@@ -1,10 +1,11 @@
-import sys; sys.path.append("./src")
+import sys; sys.path.append("./")
 
-import os, requests, unidecode, json
+import json
 from bs4.element import Tag
-from create.player import Player
-from create.team import Team
-from utils import Utils
+
+from src.create.player import Player
+from src.create.team import Team
+from src.utils import Utils
 
 
 class Crawler:

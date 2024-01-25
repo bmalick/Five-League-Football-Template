@@ -1,7 +1,7 @@
-import sys; sys.path.append("./src")
-import requests
-from payloads import LeaguePayload
-from utils import Utils
+import sys; sys.path.append("./")
+
+from src.create.payloads import LeaguePayload
+from src.utils import Utils
 
 
 class League:

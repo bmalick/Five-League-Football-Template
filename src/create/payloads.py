@@ -1,5 +1,6 @@
-import sys; sys.path.append("./src")
-from utils import Utils
+import sys; sys.path.append("./")
+
+from src.utils import Utils
 
 class Payload:
     def __new__(self, database_id: str) -> dict:

@@ -1,8 +1,12 @@
+import sys; sys.path.append("./")
 
-# import datetime
-# from match import Match
-# from crawlers import Crawler
-# from utils import Utils
+import datetime
+from tqdm import tqdm
+
+from src.create.match import Match
+from src.calendars.crawlers import Crawler
+from src.calendars.scores import UpdateScore
+from src.utils import Utils
 
 
 

@@ -1,6 +1,7 @@
-import sys; sys.path.append("./src")
-from create.payloads import PlayerPayload
-from utils import Utils
+import sys; sys.path.append("./")
+
+from src.create.payloads import PlayerPayload
+from src.utils import Utils
 
 class Player:
     NOTION_ENDPOINT = "https://api.notion.com/v1/pages"
