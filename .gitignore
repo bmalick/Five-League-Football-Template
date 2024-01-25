@@ -3,3 +3,6 @@ env/
 
 IDs.yaml
 *.yaml
+
+# Notebooks
+*ipynb
