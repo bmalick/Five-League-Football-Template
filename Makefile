@@ -50,10 +50,16 @@ today:
 # laliga-calendar:
 # 	@python ./scripts/laliga_calendar.py
 
-update-score:
+update:
 	@python ./scripts/update_scores.py \
 	--league $(league) \
 	--week $(week)
+
+delete:
+	@python ./scripts/delete.py \
+	--league $(league) \
+	--week $(week)
+
 
 
 # instructions:

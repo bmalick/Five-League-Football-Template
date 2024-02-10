@@ -84,31 +84,63 @@ class UpdateScore:
         away_team_id = Utils.get_id(away_team)
 
         for item in fixtures:
-            match_id = item["id"]
+            if not item["properties"]["Played?"]["checkbox"]:
+                match_id = item["id"]
 
-            url = "%s/%s" % (cls.page_endpoint, match_id)
-            payload = {
-                "properties":{
-                    "Home Score":{
-                        "number": home_score
-                    },
-                    "Away Score":{
-                        "number": away_score
-                    },
-                    "Played?":{
-                        "checkbox": True
+                url = "%s/%s" % (cls.page_endpoint, match_id)
+                payload = {
+                    "properties":{
+                        "Home Score":{
+                            "number": home_score
+                        },
+                        "Away Score":{
+                            "number": away_score
+                        },
+                        "Played?":{
+                            "checkbox": True
+                        }
                     }
                 }
-            }
 
-            if home_score > away_score:
-                payload["properties"]["Winner"] = {"relation": [{"id": home_team_id}]}
-                payload["properties"]["Looser"] = {"relation": [{"id": away_team_id}]}
-            elif home_score < away_score:
-                payload["properties"]["Winner"] = {"relation": [{"id": away_team_id}]}
-                payload["properties"]["Looser"] = {"relation": [{"id": home_team_id}]}
-            else:
-                payload["properties"]["Draw H"] = {"relation": [{"id": home_team_id}]}
-                payload["properties"]["Draw A"] = {"relation": [{"id": away_team_id}]}
-            
-            Utils.update(url, payload)
+                if home_score > away_score:
+                    payload["properties"]["Winner"] = {"relation": [{"id": home_team_id}]}
+                    payload["properties"]["Looser"] = {"relation": [{"id": away_team_id}]}
+                elif home_score < away_score:
+                    payload["properties"]["Winner"] = {"relation": [{"id": away_team_id}]}
+                    payload["properties"]["Looser"] = {"relation": [{"id": home_team_id}]}
+                else:
+                    payload["properties"]["Draw H"] = {"relation": [{"id": home_team_id}]}
+                    payload["properties"]["Draw A"] = {"relation": [{"id": away_team_id}]}
+                
+                Utils.update(url, payload)
+
+    @classmethod
+    def delete_gameweek(cls, league: int, gameweek: int, limit=100):
+        database_id = Utils.get_id("matches_db")
+        league_id = Utils.get_id(league)
+        url = "%s/%s/query" % (cls.database_endpoint, database_id)
+
+        payload = {
+            "page_size": limit,
+            "filter":{
+                "and": [
+                    {
+                        "property": "League",
+                        "relation": {"contains": league_id}
+                    },
+                    {
+                        "property": "GW",
+                        "formula": {"number": {"equals": gameweek}}
+                    },
+                    
+                    
+                ]
+            }
+        }
+
+        response = Utils.post(endpoint=url,payload=payload).json()["results"]
+        for item in response:
+            url = "%s/%s" % (cls.page_endpoint, item["id"])
+            print(item["properties"]["Name"]["title"][0]["plain_text"] + " deleted.")
+            Utils.update(url, {"archived": True})
+        print("\nUpdating gameweek fixtures ...")
