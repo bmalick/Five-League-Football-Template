@@ -52,7 +52,6 @@ class Utils:
         }
         
         response = requests.patch(**params)
-        # print(response.text)
         response.raise_for_status()
         return response
     

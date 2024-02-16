@@ -13,10 +13,10 @@ class LaLigaCalendar(Crawler):
     league_name  = "La Liga"
     calendar_url = "https://www.laliga.com/en-FR/laliga-easports/results/2023-24/gameweek-"
     tags         = {
-        "match_tag":  "table > tbody > tr:nth-child(3n+1)",
-        "date_tag":   "td:nth-child(2)",
-        "hour_tag":   "td:nth-child(3)",
-        "teams_tag":  "td:nth-child(5) a",
+        "match_tag": "table > tbody > tr:nth-child(3n+1)",
+        "date_tag":  "td:nth-child(2)",
+        "hour_tag":  "td:nth-child(3)",
+        "teams_tag": "td:nth-child(5) a",
         "score_tag": ".live"
     }
 
