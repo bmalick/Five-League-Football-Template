@@ -10,11 +10,9 @@ from src.calendars.scores import UpdateScore
 
 CALENDARS = {
     "laliga": LaLigaCalendar,
-    "liga": LaLigaCalendar,
     "ligue1": Ligue1Calendar,
     "bundesliga": BundesligaCalendar,
     "premierleague": PremierLeagueCalendar,
-    "pl": PremierLeagueCalendar,
     # "seriea": SerieACalendar
 }
 

@@ -9,11 +9,9 @@ from src.calendars.premierleague import PremierLeagueCalendar
 
 CALENDARS = {
     "laliga": LaLigaCalendar,
-    "liga": LaLigaCalendar,
     "ligue1": Ligue1Calendar,
     "bundesliga": BundesligaCalendar,
     "premierleague": PremierLeagueCalendar,
-    "pl": PremierLeagueCalendar,
     # "seriea": SerieACalendar
 }
 
