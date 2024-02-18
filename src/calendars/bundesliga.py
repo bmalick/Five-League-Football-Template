@@ -60,14 +60,15 @@ class BundesligaCalendar(Crawler):
             if match_hour is not None:
                 match_time = match_hour.get_text().split(":")
                 match_date =match_date.replace(hour=int(match_time[0]), minute=int(match_time[1]))
-                match_date = match_date.strftime("%Y-%m-%d %H:%M")
-            else: match_date = match_date.strftime("%Y-%m-%d %H:%M")
+            #     match_date = match_date.strftime("%Y-%m-%d %H:%M")
+            # else: match_date = match_date.strftime("%Y-%m-%d %H:%M")
             
             
             Match(
                 league     = self.league_name,
                 matchday   = matchday,
-                match_date = match_date,
+                match_date = match_date.strftime("%Y-%m-%d %H:%M"),
+                end_date   = (match_date + datetime.timedelta(minutes=90)).strftime("%Y-%m-%d %H:%M"),
                 home_team  = home_team,
                 away_team  = away_team,
                 post       = False

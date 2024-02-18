@@ -8,7 +8,7 @@ from src.utils import Utils
 class Match:
     def __init__(
             self, league: str,
-            matchday: str, match_date: str,
+            matchday: str, match_date: str, end_date: str,
             home_team: str, away_team: str,
             post: bool = True
         
@@ -18,9 +18,10 @@ class Match:
         self.post            = post
 
         self.params = {
-            "league":league,
+            "league": league,
             "matchday": matchday,
-            "match_date":match_date,
+            "match_date": match_date,
+            "end_date": end_date,
             "home_team": home_team,
             "away_team": away_team
         }

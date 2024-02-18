@@ -122,7 +122,7 @@ class MatchPayload(Payload):
             **payload["properties"],
             "Home Team": {"relation": [{"id": Utils.get_id(params.get("home_team"))}]},
             "Away Team": {"relation": [{"id": Utils.get_id(params.get("away_team"))}]},
-            "Date": {"date": {"start": params.get("match_date"), "time_zone": "Europe/Paris"}},
+            "Date": {"date": {"start": params.get("match_date"), "end": params.get("end_date"), "time_zone": "Europe/Paris"}},
             "League": {"relation": [{"id": Utils.get_id(params.get("league"))}]},
         }
 

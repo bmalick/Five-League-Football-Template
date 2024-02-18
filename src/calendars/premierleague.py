@@ -79,14 +79,15 @@ class PremierLeagueCalendar(Crawler):
                 match_date = datetime.datetime.fromtimestamp(int(match_date))
 
                 match_date_fmt =match_date.strftime("%Y-%m-%d")
-                match_date = match_date.strftime("%Y-%m-%d %H:%M")
+                # match_date = match_date.strftime("%Y-%m-%d %H:%M")
 
                 if not UpdateScore.match_exists(match_date_fmt, home_team, away_team):
                         
                     Match(
                         league     = cls.league_name,
                         matchday   = matchday,
-                        match_date = match_date,
+                        match_date = match_date.strftime("%Y-%m-%d %H:%M"),
+                        end_date   = (match_date + datetime.timedelta(minutes=90)).strftime("%Y-%m-%d %H:%M"),
                         home_team  = home_team,
                         away_team  = away_team,
                         post       = True

@@ -71,7 +71,7 @@ class Ligue1Calendar(Crawler):
                     match_date = ' '.join(match_date)
                     match_date = datetime.datetime.strptime(match_date, "%a %d %B %Y %H:%M")
                     match_date_fmt = match_date.strftime("%Y-%m-%d")
-                    match_date = match_date.strftime("%Y-%m-%d %H:%M")
+                    # match_date = match_date.strftime("%Y-%m-%d %H:%M")
 
                     home_team = cls.get_element(match_soup, cls.tags["home_team_tag"]).text.strip()
                     away_team = cls.get_element(match_soup, cls.tags["away_team_tag"]).text.strip()
@@ -82,7 +82,8 @@ class Ligue1Calendar(Crawler):
                         Match(
                             league     = cls.league_name,
                             matchday   = matchday,
-                            match_date = match_date,
+                            match_date = match_date.strftime("%Y-%m-%d %H:%M"),
+                            end_date   = (match_date + datetime.timedelta(minutes=90)).strftime("%Y-%m-%d %H:%M"),
                             home_team  = home_team,
                             away_team  = away_team,
                             post       = True
