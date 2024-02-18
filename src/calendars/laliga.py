@@ -69,7 +69,7 @@ class LaLigaCalendar(Crawler):
                     continue
                     # print("%s vs %s fixture is already planned on %s" % (home_team, away_team, match_date))
                 
-            else: match_date = match_date.strftime("%Y-%m-%d %H:%M"); print("Programme is not ready"); continue
+            # else: match_date = match_date.strftime("%Y-%m-%d %H:%M"); print("Programme is not ready"); continue
     
     def get_season_fixtures(self) -> None:
         for gameweek in tqdm(range(1,39)):

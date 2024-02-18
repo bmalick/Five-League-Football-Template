@@ -118,6 +118,7 @@ class UpdateScore:
     def delete_gameweek(cls, league: int, gameweek: int, limit=100):
         database_id = Utils.get_id("matches_db")
         league_id = Utils.get_id(league)
+        
         url = "%s/%s/query" % (cls.database_endpoint, database_id)
 
         payload = {
@@ -140,7 +141,7 @@ class UpdateScore:
 
         response = Utils.post(endpoint=url,payload=payload).json()["results"]
         for item in response:
-            url = "%s/%s" % (cls.page_endpoint, item["id"])
             print(item["properties"]["Name"]["title"][0]["plain_text"] + " deleted.")
+            url = "%s/%s" % (cls.page_endpoint, item["id"])
             Utils.update(url, {"archived": True})
-        print("\nUpdating gameweek fixtures ...")
+        # print("\nUpdating gameweek fixtures ...")

@@ -41,7 +41,7 @@ def main() -> None:
         gameweek=week
     )
     
-    CALENDARS.get(league).get_fixtures(gameweek=week)
+    # CALENDARS.get(league).get_fixtures(gameweek=week)
 
 
 if __name__ == "__main__":

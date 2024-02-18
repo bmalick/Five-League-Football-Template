@@ -60,6 +60,10 @@ delete:
 	--league $(league) \
 	--week $(week)
 
+gameweek:
+	@python ./scripts/gameweek.py \
+	--league $(league) \
+	--week $(week)
 
 
 # instructions:
