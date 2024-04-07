@@ -5,14 +5,12 @@ The teams and fixtures are taken from official leagues calendars and then they a
 The fetching of gameweek matches are scraped and there are commands to have updates every week.
 Note that only Laliga, Premier League and Bundesliga and Ligue1 matches are available. Serie A fixtures are coming soon.
 
+<img src="footbal-template.png">
 
 # Notion API
 Notion API is used for page creation. Follow the description [here](https://developers.notion.com/docs/authorization) to create your Notion Integration.
 
 
-
-
-<!-- IMAGE DE LA PAGE -->
 
 
 # Makefile commands
