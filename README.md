@@ -1,8 +1,9 @@
 # Five League Football Template
 
 This project aims to create datasets of Football fixtures into your Notion page.
-The teama and fixtures are taken from official leagues calendars and then they are embedded into Notion page.
+The teams and fixtures are taken from official leagues calendars and then they are embedded into Notion page.
 The fetching of gameweek matches are scraped and there are commands to have updates every week.
+Note that only Laliga, Premier League and Bundesliga and Ligue1 matches are available. Serie A fixtures are coming soon.
 
 
 # Notion API
@@ -14,19 +15,26 @@ Notion API is used for page creation. Follow the description [here](https://deve
 <!-- IMAGE DE LA PAGE -->
 
 
-# Configs
-Les entraînements sont lancés en exécutant:
-```bash
-make train cfg=[filename]
-```
+# Makefile commands
 
-Le dossier [**configs**](/kss/configs/) contients les fichiers de configuration utiliser pour spécifier l'ensemble des paramètres pour un entraînement.
+- calendar: Create Notion pages of matches available since the gameweek 1 when given the league name. league arguments must be: liga, laliga, pl, premierleague, bundesliga and ligue1
+    ```bash
+    make calendar league=[league name]
+    ```
+- gameweek: Some of the fixtures are not yet available. So create them via this command.
+    ```bash
+    make gameweek league=[league name] week=[gameweek num]
+    ```
 
-Voici la structure d'un fichier de configuration:
-
-- La section **model** spécifie les paramètres du modèle
-
-- La section **training** contient des paramètres liés à l'entraînement, tels que le nombre d'epochs, l'optimiseur, la fonction de perte, les métriques et les callbacks.
-
-- La section **dataset** spécifie les détails sur les générateurs et les fichiers d'annotations.
-
+- update: Find matches scores of the gameweek for a given league and update pages in Notion.
+    ```bash
+    make update league=[league name] week=[gameweek num]
+    ```
+- today: Update matches results that occur today for all leagues.
+    ```bash
+    make today
+    ```
+- delete: Delete a whole league gameweek pages in Notion.
+    ```bash
+    make delete league=[league name] week=[gameweek num]
+    ```

@@ -35,21 +35,6 @@ today:
 	@python ./scripts/today_fixtures.py 
 
 
-# laliga-calendar:
-# 	@python ./src/laliga_calendar.py
-
-# fetch-barca-squad:
-# 	@python ./src/barca_squad.py
-
-# bundesliga-calendar:
-# 	@python ./scripts/bundesliga_calendar.py
-
-# premier-league-calendar:
-# 	@python ./scripts/premier_league_calendar.py
-
-# laliga-calendar:
-# 	@python ./scripts/laliga_calendar.py
-
 update:
 	@python ./scripts/update_scores.py \
 	--league $(league) \
