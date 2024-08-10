@@ -19,7 +19,7 @@ def main(args) -> None:
     data = read_yaml("build.yaml")
     try:
         league = objects[name](**data[name])
-        league.get_calendar()
+        league.create()
     except: print(f"{name} not found")
 
 if __name__ == "__main__":

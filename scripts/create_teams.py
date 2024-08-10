@@ -1,21 +1,33 @@
 import sys; sys.path.append("./")
 
-import json, os
-from src.calendars.crawlers import LeagueCrawler
+from argparse import ArgumentParser
+from src.league import LaLiga, Bundesliga, PremierLeague
+from src.utils import read_yaml
+objects = {
+    "laliga": LaLiga,
+    "bundesliga": Bundesliga,
+    "premierleague": PremierLeague,
+}
 
-def main() -> None:
-    with open("./data/data.json") as file:
-        data  = json.load(file)
-    leagues_data = data["leagues"]
-    for row in leagues_data:
-        crawler_data = row["crawler_data"]
-        kwargs = {
-            "name": row["class_kwargs"]["name"],
-            "base_url": row["class_kwargs"]["url"],
-            **crawler_data
-        }
-        LeagueCrawler(**kwargs)
-        
+names = {
+    "liga": "laliga",
+    "pl": "premierleague",
+}
+
+def main(args) -> None:
+    name = names.get(args.league, args.league)
+    data = read_yaml("build.yaml")
+    try:
+        league = objects[name](**data[name])
+        league.get_teams()
+    except: print(f"{name} not found")
+
 if __name__ == "__main__":
-    main()
-
+    parser = ArgumentParser()
+    parser.add_argument(
+        "-l", "--league",
+        type=str, required=True,
+        help="Name of the league without space."
+    )
+    args = parser.parse_args()
+    main(args)
