@@ -6,60 +6,52 @@ import yaml, unidecode, requests
 from bs4 import BeautifulSoup
 from bs4.element import Tag
 
-class Utils:
 
-    @staticmethod
-    def add_path(path: str) -> None:
-        sys.path.append(path)
+def read_yaml(filename: str) -> str:
+    with open(filename, "r", encoding="utf-8") as f:
+        return yaml.safe_load(f)
 
-    @staticmethod
-    def get_id(id_name: str) -> str:
-        id_name = unidecode.unidecode(id_name.replace(" ", "").lower())
-        with open("./ids.yaml", "r", encoding="utf-8") as file:
-            data = yaml.safe_load(file)
-        return data.get(id_name, None)
+def save_yaml(filename: str, data: dict):
+    with open(filename, 'w') as f:
+        yaml.safe_dump(data, f, sort_keys=False)
 
-    @staticmethod
-    def headers() -> dict:
-        return {
-            "accept": "application/json",
-            "Notion-Version": "2022-06-28",
-            "content-type": "application/json",
-            "Authorization": "Bearer " + Utils.get_id("notion_api_key")
-        }
 
-    @staticmethod
-    def post(endpoint: str, payload: dict) -> None:
+class Parameters:
+    def save_parameters(self, ignore: list[str] = None, **kwargs):
+        ignore = ignore or []
+        for k, v in kwargs.items():
+            if k not in ignore: setattr(self, k, v)
 
-        params = {
-            "url": endpoint,
-            "json": payload,
-            "headers": Utils.headers()
-        }
-        
-        response = requests.post(**params)
-        # print(response.text)
-        response.raise_for_status()
-        return response
+class Displayer(Parameters):
+
+    def __init__(self, widths: list[int] = [4, 60], columns: list[str] = ['', "Title"]) -> None:
+        assert len(widths) == len(columns), "widths and columns arguments must have the same number of elements."
+        self.save_parameters(widths=widths, columns=columns)
+
+    @property
+    def line(self) -> str:
+        line = "+" + "%s+" * len(self.widths)
+        line %= tuple(['-'*w for w in self.widths])
+        return line
     
-    @staticmethod
-    def update(endpoint: str, payload: dict) -> None:
-        
-        params = {
-            "url": endpoint,
-            "json": payload,
-            "headers": Utils.headers()
-        }
-        
-        response = requests.patch(**params)
-        response.raise_for_status()
-        return response
+    @property
+    def top(self) -> str:
+        res = self.line + "\n"
+        cols = "|" + " %s|" * len(self.widths)
+        cols %= tuple([col.ljust(w-1)
+                       for w,col in zip(self.widths, self.columns)])
+        res += cols
+        res += "\n|%s|\n" % self.line[1:-1]
+        return res   
     
-    @staticmethod
-    def get_soup(url: str) -> Tag:
-        try:
-            req = requests.get(url)
-        except requests.exceptions.RequestException:
-            return None
-        return BeautifulSoup(req.text, "html.parser")
-
+    def display(self, to_display: list):
+        text = self.top
+        for idx, args in enumerate(to_display):
+            col = "|" + " %s |" * len(self.widths) + "\n"
+            col %= tuple([str(idx+1).ljust(self.widths[0]-2)] + [
+                val.ljust(w-2) if isinstance(val, str) else str(val).rjust(w-2)
+                for w,val in zip(self.widths[1:], args)
+            ])
+            text += col
+        text += self.line
+        return text
