@@ -50,6 +50,17 @@ gameweek:
 	--league $(league) \
 	--week $(week)
 
+delete-update:
+	@python ./scripts/delete.py \
+	--league $(league) \
+	--week $(week)
+	@python ./scripts/gameweek.py \
+	--league $(league) \
+	--week $(week)
+	@python ./scripts/update_scores.py \
+	--league $(league) \
+	--week $(week)
+
 
 # instructions:
 # 	@start "" instructions.pdf
