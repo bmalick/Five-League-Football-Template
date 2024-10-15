@@ -1,0 +1,37 @@
+laliga:
+    name: La Liga
+    url: https://www.laliga.com
+    logo: https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/LaLiga_EA_Sports_2023_Vertical_Logo.svg/langfr-1280px-LaLiga_EA_Sports_2023_Vertical_Logo.svg.png
+    calendar_url: https://www.laliga.com/en-FR/laliga-easports/results/2024-25/gameweek-%d
+    teams_url: https://www.laliga.com/en-FR/laliga-easports/clubs
+    # num_gameweeks: 38
+    num_gameweeks: 1
+premierleague:
+    name: Premier League
+    url: https://www.premierleague.com/
+    logo: https://www.premierleague.com/resources/rebrand/v7.150.1/i/elements/pl-main-logo.png
+    calendar_url: https://www.premierleague.com/matchweek/%d/blog?match=true
+    teams_url: https://www.premierleague.com/
+    num_gameweeks: 38
+bundesliga:
+    name: Bundesliga
+    url: https://www.bundesliga.com
+    logo: https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Bundesliga_logo_%282017%29.svg/1200px-Bundesliga_logo_%282017%29.svg.png
+    calendar_url: https://www.bundesliga.com/en/bundesliga/matchday/2024-2025/%d
+    teams_url: https://www.bundesliga.com/en/bundesliga/clubs
+    num_gameweeks: 32
+# ligue1:
+#     name: Ligue 1
+#     url: https://www.ligue1.com
+#     logo: https://www.lfp.fr/assets/LFP_REVEAL_WEB_LFP_RS_1280x1600_b0591cf653.jpg
+#     calendar_url: https://ligue1.com/competitions/ligue1mcdonalds?tab=results&gameweek=%d
+#     teams_url: https://ligue1.com/competitions/ligue1mcdonalds?tab=standings
+#     num_gameweeks: 34
+# seriea:
+#     name: Serie A
+#     url: https://www.legaseriea.it/en
+#     logo: https://img.legaseriea.it/vimages/6687f1bd/SerieA_RGB_2024-2025.jpg?webp&q=70&size=-x0
+#     calendar_url: "???"
+#     teams_url: https://www.legaseriea.it/en
+#     num_gameweeks: 38
+

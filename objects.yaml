@@ -1,0 +1,397 @@
+# Pages
+database_parent:
+    paths:
+        id: database_id
+    object:
+        type: database_id
+
+page_parent:
+    paths:
+        id: page_id
+    object:
+        type: page_id
+
+
+# Init database properties
+init_properties:
+    text:
+        rich_text: {}
+    checkbox:
+        checkbox: {}
+    date:
+        date: {}
+    email:
+        email: {}
+    files:
+        files: {}
+    formula:
+        formula: {}
+    number:
+        number: {}
+    people:
+        people: {}
+    phone_number:
+        phone_number: {}
+    url:
+        url: {}
+    select:
+        type: select
+        select:
+            options: []
+    multi_select:
+        type: multi_select
+        multi_select:
+            options: []
+
+
+# Properties
+page_title:
+    paths:
+        title: title[0].text.content
+    object:
+        title: []
+date:
+    paths:
+        start: date.start
+        end: date.end
+        time_zone: date.time_zone
+    object:
+        date:
+            time_zone: Europe/Paris
+email:
+    paths:
+        email: email
+    object: {}
+checkbox:
+    paths:
+        checked: checkbox
+    object: {}
+number:
+    paths:
+        number: number
+    object: {}
+phone_number:
+    paths:
+        phone_number: phone_number
+    object: {}
+url:
+    paths:
+        url: url
+    object: {}
+select:
+    paths:
+        select: select.name
+    object: {}
+status:
+    paths:
+        status: status.name
+    object: {}
+icon:
+    paths:
+        url: external.url
+    object: {}
+files:
+    extend_paths: True
+    paths:
+        name: files[0].name
+        url: files[0].external.url
+    object:
+        files: []
+multi_select:
+    extend_paths: True
+    paths:
+        name: multi_select[0].name
+    object:
+        multi_select: []
+relation:
+    paths:
+        id: relation[0].id
+    object:
+        relation: []
+text:
+    paths:
+        text: rich_text[0].text.content
+        link: rich_text[0].link
+        bold: rich_text[0].annotations.bold
+        italic: rich_text[0].annotations.italic
+        strikethrough: rich_text[0].annotations.strikethrough
+        underline: rich_text[0].annotations.underline
+        code: rich_text[0].annotations.code
+        color: rich_text[0].annotations.color
+    object:
+        rich_text:
+        - type: text
+          text:
+            content: null
+            link: null
+          annotations:
+            bold: false
+            italic: false
+            strikethrough: false
+            underline: false
+            code: false
+            color: default
+
+# Blocks
+bookmark:
+    paths:
+        caption: bookmark.caption[0]
+        url: bookmark.url
+    object:
+        type: bookmark
+        bookmark: {}
+breadcrumb:
+    paths: {}
+    object:
+        breadcrumb: {}
+bulleted_list_item:
+    extend_paths: True
+    paths:
+        text: bulleted_list_item.rich_text[0].text.content
+    object:
+        type: bulleted_list_item
+        bulleted_list_item:
+            rich_text:
+                - type: text
+                  text:
+                    content: null
+numbered_list_item:
+    extend_paths: True
+    paths:
+        text: numbered_list_item.rich_text[0].text.content
+    object:
+        type: numbered_list_item
+        numbered_list_item:
+            rich_text:
+                - type: text
+                  text:
+                    content: null
+callout:
+    extend_paths: True
+    paths:
+        text: callout.rich_text[0].text.content
+        icon: callout.icon.external.url
+    object:
+        type: callout
+        callout:
+            rich_text:
+            - type: text
+              text:
+                content: null
+            icon:
+                type: external
+# todo
+child_database:
+    paths:
+        title: child_database.title
+    object:
+        type: child_database
+        child_database:
+            title: null
+# todo
+child_page:
+    paths:
+        title: child_page.title
+    object:
+        type: child_page
+        child_page:
+            title: null
+code:
+    paths:
+        code: code.rich_text[0].text.content
+        language: code.language
+    object:
+        type: code
+        code:
+            # caption: []
+            rich_text:
+            - type: text
+              text:
+                content: null
+            language: null
+# column_list:
+# todo
+#     paths:
+#         list: column_list
+#     object:
+#         column_list: {}
+divider:
+    paths: {}
+    object:
+        divider: {}
+table_of_contents:
+    paths:
+        color: table_of_contents.color
+    object:
+        table_of_contents:
+            color: default
+embed:
+    paths:
+        url: embed.url
+    object:
+        embed: {}
+equation:
+    paths:
+        expression: equation.expression
+    object:
+        equation: {}
+image:
+    paths:
+        url: image.external.url
+    object:
+        image:
+            type: external
+video:
+    paths:
+        url: video.external.url
+    object:
+        video:
+            type: external
+# todo
+# link_preview:
+#     paths:
+#         url: link_preview.url
+#     object:
+#         type: link_preview
+#         link_preview: {}
+file_block:
+    paths:
+        name: file.name
+        url: file.external.url
+    object:
+        file:
+            caption: []
+            type: external
+            external:
+                url: null
+            name: null
+heading_1:
+    extend_paths: True
+    paths:
+        text: heading_1.rich_text[0].text.content
+        color: heading_1.color
+        is_toggleable: heading_1.is_toggleable
+    object:
+        type: heading_1
+        heading_1:
+            rich_text:
+                - type: text
+                  text:
+                    content: null
+                  annotations:
+                    bold: true
+            color: default
+            is_toggleable: false
+heading_2:
+    extend_paths: True
+    paths:
+        text: heading_2.rich_text[0].text.content
+        color: heading_2.color
+        is_toggleable: heading_2.is_toggleable
+    object:
+        type: heading_2
+        heading_2:
+            rich_text:
+                - type: text
+                  text:
+                    content: null
+                  annotations:
+                    bold: true
+            color: default
+            is_toggleable: false
+heading_3:
+    extend_paths: True
+    paths:
+        text: heading_3.rich_text[0].text.content
+        color: heading_3.color
+        is_toggleable: heading_3.is_toggleable
+    object:
+        type: heading_3
+        heading_3:
+            rich_text:
+                - type: text
+                  text:
+                    content: null
+                  annotations:
+                    bold: true
+            color: default
+            is_toggleable: false
+paragraph:
+    paths:
+        text: paragraph.rich_text[0].text.content
+        color: paragraph.color
+    object:
+        paragraph:
+            rich_text:
+                - type: text
+                  text:
+                    content: null
+            color: default
+pdf:
+    paths:
+        name: file.name
+        url: file.external.url
+    object:
+        type: pdf
+        pdf:
+            type: external
+            external:
+                url: null
+quote:
+    paths:
+        text: quote.rich_text[0].text.content
+        color: quote.color
+    object:
+        type: quote
+        quote:
+            rich_text:
+                - type: text
+                  text:
+                    content: null
+            color: default
+# todo
+# synced_block
+# todo
+table:
+    paths:
+        width: table.table_width
+        has_column_header: tabel.has_column_header
+        has_row_header: tabel.has_row_header
+    object:
+        type: table
+        table:
+            has_column_header: false
+            has_row_header: false
+to_do:
+    extend_paths: True
+    paths:
+        text: to_do.rich_text[0].text.content
+        checked: to_do.checked
+        color: to_do.color
+    object:
+        type: to_do
+        to_do:
+            rich_text:
+                - type: text
+                  text:
+                    content: null
+            checked: false
+            color: default
+            # children:
+            # - type: paragraph
+toggle:
+    extend_paths: True
+    paths:
+        text: toggle.rich_text[0].text.content
+        checked: toggle.checked
+        color: toggle.color
+    object:
+        type: toggle
+        toggle:
+            rich_text:
+                - type: text
+                  text:
+                    content: null
+            color: default
+            # children:
+            # - type: paragraph
